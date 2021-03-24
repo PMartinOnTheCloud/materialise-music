@@ -25,3 +25,11 @@ body {
 .tabs-content {
   height: 100% !important;
 }
+
+div[id^="test-swipe-"] {
+  padding: 20px;
+}
+
+ul#listedresults > li {
+  cursor: pointer;
+}
