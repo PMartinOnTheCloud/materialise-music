@@ -15,8 +15,11 @@ $(document).ready(function(){
     }
 
     function toDetails() {
+        $('div#test-swipe-2').html('');
+        let elementDetails = $(this).data('artistData');
+        let detailsP = `<p>Name: ${elementDetails['name']}<br>Type: ${elementDetails['type']}\t ${elementDetails['disambiguation']}<br>Country: ${elementDetails['country']}<br>Year since/end: ${elementDetails['life-span']['begin']} to ${elementDetails['life-span']['end'] ? elementDetails['life-span']['end'] : "????"}</p>`;
+        $('div#test-swipe-2').append(detailsP);
         document.querySelectorAll('a[href="#test-swipe-2"]')[0].click();
-        console.log($(this).data('artistData'));
     }
 
     $('#searchbutton').click(connectToApi);
